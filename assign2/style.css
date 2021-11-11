@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.error {
+  color: rgb(255, 0, 0);
+}
+.correct {
+  color: rgb(4, 105, 0);
+}
+.container {
+  width: 450px;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #ffff;
+}
+
+.table,
+.adminContainer,
+.container,
+.textinput,
+.button .font {
+  font: 500 1rem "Arial", sans-serif;
+}
+
+.adminContainer {
+  text-align: center;
+  width: 800px;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #ffff;
+}
+.textinput {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  outline: none;
+  background: #dddddd;
+}
+.bookinginput {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  outline: none;
+  background: #dddddd;
+}
+.dateTimeInput {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  outline: none;
+  background: #dddddd;
+}
+.input-group {
+  margin-bottom: 1rem;
+}
+.button-admin {
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  background: rgb(0, 255, 115);
+}
+
+.button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  background: rgb(0, 255, 115);
+}
+
+.button:hover,
+.button-admin:hover {
+  background: rgb(0, 156, 70);
+}
+
+.button-admin:hover,
+.button:active {
+  transform: scale(0.98);
+}

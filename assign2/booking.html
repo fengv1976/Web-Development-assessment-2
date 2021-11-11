@@ -1,0 +1,83 @@
+<HTML XMLns="http://www.w3.org/1999/xHTML"> 
+<head>
+    <title>CabsOnline Booking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="booking.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+    <h1 class=>Booking Request</h1>
+    <form>
+        <div class="input-group">
+            <label>Name<span class = "error">*</span>: <input class="textinput" type="text" name="cname" placeholder="Required" ></label>
+        </div>
+        <div class="input-group">
+            <label>Phone Number<span class = "error">*</span>: <input class="textinput" type="text" name="phone" placeholder="Required"></label>
+        </div>
+        <div class="input-group">
+            <label>Unit Number: <input class="textinput" type="text" name="unumber"></label>
+        </div> 
+        <div class="input-group">
+            <label>Street Number<span class = "error">*</span>: <input class="textinput" type="text" name="snumber" placeholder="Required"></label>
+        </div>
+        <div class="input-group">
+            <label>Street Name<span class = "error">*</span>: <input class="textinput" type="text" name="stname" placeholder="Required"></label>
+        </div>
+        <div class="input-group">
+            <label>Suburb Name: <input class="textinput" type="text" name="sbname"></label>
+        </div>
+        <div class="input-group">
+            <label>Destination Suburb: <input class="textinput" type="text" name="dsbname"></label>
+        </div>
+
+        <!-- Pick-Up Date -->
+        <div class="input-group">
+            <label>Pick-Up Date<span class = "error">*</span>: <input class="dateTimeInput" type="date" name="date" id="datefield" ></label>
+            <!-- Get current date -->
+            <script type="text/javascript">
+                var today = new Date();
+                var dd = String(today.getDate()).padStart(2,'0');
+                var mm = String(today.getMonth()+1).padStart(2,'0');
+                var yyyy = today.getFullYear();
+                var date = yyyy + '-' + mm + '-' + dd;
+                var current_date=document.getElementById("datefield");
+                document.getElementById("datefield").setAttribute("min", date);
+                current_date.value = date;
+            </script>
+        </div>
+
+        <!-- Pick-Up Time -->
+        <div class="input-group">
+            <label>Pick-Up Time<span class = "error">*</span>: <input class="dateTimeInput" type="time" name="time" id="timefield" ></label>
+            <!-- Get current time -->
+            <script type="text/javascript">
+                var today = new Date();
+                var hh = String(today.getHours()).padStart(2,'0');
+                var mm = String(today.getMinutes()).padStart(2,'0');
+                var time = hh + ':' + mm ;
+                var current_time=document.getElementById("timefield").value = time;
+            </script>
+        </div>
+
+        <!-- Output -->
+        <p id="targetDiv"class="font" name="reference"></p> 
+        
+        <input name="submit" class="button" type = "button" value = "Create Booking"
+            onClick = "getData('booking.php',
+                        'targetDiv',
+                        cname.value,
+                        phone.value,
+                        unumber.value,
+                        snumber.value,
+                        stname.value,
+                        sbname.value,
+                        dsbname.value,
+                        date.value,
+                        time.value)">
+    </form>
+</div>
+</body>
+</html>

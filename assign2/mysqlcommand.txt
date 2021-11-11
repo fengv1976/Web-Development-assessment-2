@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS booking (
+'bnumber' int(4) NOT NULL PRIMARY KEY,
+'name' varchar(255) NOT NULL,
+'phone' int(20) NOT NULL,
+'unumber' varchar(15),
+'snumber' int(11) NOT NULL,
+'stname' varchar(255) NOT NULL,
+'sbname' varchar(255),
+'dsbname' varchar(255),
+'date' date NOT NULL,
+'time' time NOT NULL,
+'status' varchar(20))"

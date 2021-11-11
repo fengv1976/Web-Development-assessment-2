@@ -1,0 +1,40 @@
+<HTML XMLns="http://www.w3.org/1999/xHTML"> 
+    <head>
+        <title>CabsOnline Administration</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="admin.js"></script>
+    </head>
+    <body>
+        <script>
+                
+        </script>
+    <div class="adminContainer">
+        <h1 class=>Admin Booking Search</h1>
+        <!-- Booking Search -->
+        <form> 
+            <div class="input-group" style="margin-left: auto;margin-right: auto;">
+                <label>Search Booking Number:<input class="bookinginput" type="text" name="bsearch" placeholder="eg. 0001"></label>
+            </div>
+            <!-- Output -->
+            <div id="targetDiv1"></div> 
+            
+            <input name="submit" class="button-admin" type = "button" value = "Search Booking"
+                onClick = "getData('admin.php','targetDiv1',bsearch.value)">
+        </form>
+        <hr>
+        <h1 class=>Assign Taxi</h1>
+        <!-- Status Update -->
+        <form>
+            <div class="input-group" style="margin-left: auto;margin-right: auto;">
+                <label>Update Booking Number:<input class="bookinginput" type="text" name="assignInput" placeholder="eg. 0001"></label>
+            </div>
+            <!-- Output -->
+            <div class="content" id="targetDiv2"></div> 
+
+            <input name="submit" class="button-admin" type = "button" value = "Update Status"
+                onClick = "getData('update.php','targetDiv2',assignInput.value)">
+        </form>
+    </div>
+    </body>
+    </html>
